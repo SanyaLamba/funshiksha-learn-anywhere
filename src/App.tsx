@@ -4,10 +4,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SplashScreen from "./pages/SplashScreen";
+import LanguageSelection from "./pages/LanguageSelection";
 import RoleSelection from "./pages/RoleSelection";
 import ClassSelection from "./pages/ClassSelection";
+import StudentLogin from "./pages/StudentLogin";
 import StudentRegistration from "./pages/StudentRegistration";
 import StudentDashboard from "./pages/StudentDashboard";
+import TeacherLogin from "./pages/TeacherLogin";
 import SSTGame from "./pages/games/SSTGame";
 import OdiaGame from "./pages/games/OdiaGame";
 import TeacherDashboard from "./pages/TeacherDashboard";
@@ -24,10 +27,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SplashScreen />} />
+          <Route path="/language-selection" element={<LanguageSelection />} />
           <Route path="/role-selection" element={<RoleSelection />} />
           <Route path="/class-selection" element={<ClassSelection />} />
+          <Route path="/student-login" element={<StudentLogin />} />
           <Route path="/student-registration" element={<StudentRegistration />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/teacher-login" element={<TeacherLogin />} />
           <Route path="/game/sst" element={<SSTGame />} />
           <Route path="/game/odia" element={<OdiaGame />} />
           <Route path="/teacher-dashboard" element={<TeacherDashboard />} />

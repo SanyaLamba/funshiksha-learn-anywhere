@@ -20,7 +20,8 @@ const ClassSelection = () => {
 
   const handleContinue = () => {
     if (selectedClass) {
-      navigate("/student-registration", { state: { classId: selectedClass } });
+      // Classes 6 and above go to student login
+      navigate("/student-login", { state: { classId: selectedClass } });
     }
   };
 
@@ -68,7 +69,7 @@ const ClassSelection = () => {
           className="w-full py-6 text-lg font-semibold bg-primary hover:bg-primary-hover disabled:opacity-50"
           size="lg"
         >
-          Continue to Registration
+          Continue to Login
         </Button>
       </div>
     </div>

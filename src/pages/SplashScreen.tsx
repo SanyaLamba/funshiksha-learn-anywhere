@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { GraduationCap, BookOpen, Gamepad2 } from "lucide-react";
+import funshikshaLogo from "@/assets/funshiksha-logo.png";
 
 const SplashScreen = () => {
   const navigate = useNavigate();
@@ -11,50 +12,50 @@ const SplashScreen = () => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(() => navigate("/role-selection"), 500);
+          setTimeout(() => navigate("/language-selection"), 500);
           return 100;
         }
         return prev + 2;
       });
-    }, 120); // 6 seconds total
+    }, 100); // 5 seconds total
 
     return () => clearInterval(timer);
   }, [navigate]);
 
   return (
-    <div className="min-h-screen bg-gradient-primary flex flex-col items-center justify-center p-6 text-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-100 flex flex-col items-center justify-center p-6 text-center">
       {/* Logo and App Name */}
       <div className="animate-bounce-in mb-8">
-        <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 shadow-strong">
-          <GraduationCap className="w-20 h-20 mx-auto mb-4 text-white" />
-          <h1 className="text-5xl font-bold text-white mb-2">Funshiksha</h1>
-          <p className="text-white/90 text-lg">Fun Learning for All</p>
+        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-strong border border-white/20">
+          <img src={funshikshaLogo} alt="Funshiksha Logo" className="w-32 h-32 mx-auto mb-4" />
+          <h1 className="text-4xl font-bold text-primary mb-2 font-display">Funshiksha</h1>
+          <p className="text-muted-foreground text-lg">Offline Learning Platform</p>
         </div>
       </div>
 
       {/* Features Icons */}
       <div className="flex space-x-6 mb-12 animate-fade-in">
-        <div className="bg-white/10 rounded-2xl p-4 backdrop-blur-sm">
-          <BookOpen className="w-8 h-8 text-white" />
+        <div className="bg-primary/10 rounded-2xl p-4 backdrop-blur-sm border border-primary/20">
+          <BookOpen className="w-8 h-8 text-primary" />
         </div>
-        <div className="bg-white/10 rounded-2xl p-4 backdrop-blur-sm">
-          <Gamepad2 className="w-8 h-8 text-white" />
+        <div className="bg-secondary/10 rounded-2xl p-4 backdrop-blur-sm border border-secondary/20">
+          <Gamepad2 className="w-8 h-8 text-secondary" />
         </div>
-        <div className="bg-white/10 rounded-2xl p-4 backdrop-blur-sm">
-          <GraduationCap className="w-8 h-8 text-white" />
+        <div className="bg-accent/10 rounded-2xl p-4 backdrop-blur-sm border border-accent/20">
+          <GraduationCap className="w-8 h-8 text-accent" />
         </div>
       </div>
 
       {/* Progress Bar */}
-      <div className="w-64 bg-white/20 rounded-full p-1 backdrop-blur-sm">
+      <div className="w-64 bg-muted/30 rounded-full p-1 backdrop-blur-sm border border-primary/20">
         <div 
-          className="bg-white rounded-full h-2 transition-all duration-300 ease-out"
+          className="bg-primary rounded-full h-2 transition-all duration-300 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>
       
-      <p className="text-white/80 mt-4 text-sm">
-        Preparing your learning adventure...
+      <p className="text-muted-foreground mt-4 text-sm">
+        शिक्षा अभियान तैयार हो रहा है...
       </p>
     </div>
   );

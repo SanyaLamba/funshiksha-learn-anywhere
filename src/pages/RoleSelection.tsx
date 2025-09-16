@@ -41,7 +41,7 @@ const RoleSelection = () => {
 
         <Card 
           className="p-8 text-center cursor-pointer hover:shadow-medium transition-all duration-300 hover:scale-105 bg-gradient-senior border-0"
-          onClick={() => navigate("/teacher-dashboard")}
+          onClick={() => navigate("/teacher-login")}
         >
           <div className="bg-white/20 rounded-full p-6 w-fit mx-auto mb-6">
             <UserCheck className="w-12 h-12 text-white" />
