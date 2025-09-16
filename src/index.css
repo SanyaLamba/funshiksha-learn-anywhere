@@ -8,7 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Educational App Color System */
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -17,26 +18,67 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Educational Blue */
+    --primary: 210 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 85% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Teal */
+    --secondary: 175 85% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 175 85% 40%;
 
+    /* Accent - Energetic Orange */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 25 95% 50%;
+
+    /* Success - Fresh Green */
+    --success: 145 85% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-hover: 145 85% 40%;
+
+    /* Warning - Sunny Yellow */
+    --warning: 45 95% 55%;
+    --warning-foreground: 0 0% 0%;
+
+    /* Error - Friendly Red */
+    --destructive: 5 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Grade-specific colors */
+    --grade-junior: 190 95% 65%; /* Bright turquoise for 6-8 */
+    --grade-middle: 200 45% 75%; /* Light blue for 9-10 */
+    --grade-senior: 220 85% 25%; /* Navy for 11-12 */
+
+    /* UI Elements */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 210 85% 55%;
 
-    --radius: 0.5rem;
+    /* Design System */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.25rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--warning)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--secondary)));
+    --gradient-junior: linear-gradient(135deg, hsl(var(--grade-junior)), hsl(var(--accent)));
+    --gradient-middle: linear-gradient(135deg, hsl(var(--grade-middle)), hsl(var(--secondary)));
+    --gradient-senior: linear-gradient(135deg, hsl(var(--grade-senior)), hsl(var(--primary)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-medium: 0 8px 25px -5px hsl(var(--primary) / 0.25);
+    --shadow-strong: 0 12px 30px -8px hsl(var(--primary) / 0.35);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
