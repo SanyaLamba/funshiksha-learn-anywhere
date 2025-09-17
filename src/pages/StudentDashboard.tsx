@@ -13,6 +13,7 @@ import {
   Globe,
   Users
 } from "lucide-react";
+import funshikshaLogo from "@/assets/funshiksha-logo.png";
 
 interface StudentData {
   name: string;
@@ -107,9 +108,7 @@ const StudentDashboard = () => {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-4">
-            <div className="bg-primary rounded-full p-3">
-              <User className="w-8 h-8 text-white" />
-            </div>
+            <img src={funshikshaLogo} alt="Funshiksha Logo" className="w-16 h-16" />
             <div>
               <h1 className="text-3xl font-bold text-primary">
                 Welcome, {studentData.name}!
